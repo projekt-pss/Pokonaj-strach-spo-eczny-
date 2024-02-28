@@ -13,20 +13,24 @@ body {
     justify-content: space-between;
     align-items: center;
     background-image: url('mountain.png'); 
-    background-size: cover; 
+    background-size: cover;                     /* ustawiłem obraz jako tło*/
     background-position: center;
+    
 }
 
 #nav {
     float: left;
     width: 30%;
     height: 70%;
+    position: fixed; /* Ustawia lewy div na stałej pozycji */
+    overflow-y: auto; /* Dodaje pionowy pasek przewijania dla lewego diva, jeśli jest potrzebny */
 }
 
 #mid {
-    float: left;
+    float: right; /* kleji mida do boku nawigacji --- ustawienie na lewo nałoży na siebie diby, nie rozjeb tego XD */
     width: 70%;
     height: 70%;
+    position: relative;
 }
 
 #footer {
