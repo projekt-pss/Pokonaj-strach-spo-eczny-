@@ -4,10 +4,13 @@ a{
 }
 
 body {
-    background-color: beige;
+    background-color: rgb(231, 231, 192);
 }
 #header {
     height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #nav {
@@ -25,4 +28,11 @@ body {
 #footer {
     clear: both;
     height: 15%;
+}
+.ziel{
+    color : rgb(124, 224, 106);
+}
+
+.nieb{
+    color: rgb(106, 183, 224);
 }
