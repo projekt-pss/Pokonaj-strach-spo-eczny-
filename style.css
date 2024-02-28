@@ -5,12 +5,16 @@ a{
 
 body {
     background-color: rgb(231, 231, 192);
+    font-family: Georgia;
 }
 #header {
     height: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url('mountain.png'); 
+    background-size: cover; 
+    background-position: center;
 }
 
 #nav {
