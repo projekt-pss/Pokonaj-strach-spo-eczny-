@@ -23,7 +23,7 @@ body {
     width: 30%;
     height: 70%;
     position: fixed; /* Ustawia lewy div na stałej pozycji */
-    overflow-y: auto; /* Dodaje pionowy pasek przewijania dla lewego diva, jeśli jest potrzebny */
+    margin-right: 80px;/* Ustawienie odstępu 15px wewnątrz diva */
 }
 
 #mid {
@@ -31,8 +31,12 @@ body {
     width: 70%;
     height: 70%;
     position: relative;
-}
+    margin-left: 100px;
 
+}
+#menu{
+    font-size: large;
+}
 #footer {
     clear: both;
     height: 15%;
@@ -44,3 +48,10 @@ body {
 .nieb{
     color: rgb(106, 183, 224);
 }
+
+.tekst{
+    border-bottom: 3px solid whitesmoke; 
+    margin-bottom: 10px;
+    font-size: large;
+}
+
