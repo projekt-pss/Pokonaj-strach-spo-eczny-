@@ -35,9 +35,31 @@
 
     <script>
         const questions = {
-            "Pytanie 1": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
-            "Pytanie 2": {"a": "Odpowiedź A2", "b": "Odpowiedź B2", "c": "Odpowiedź C2", "d": "Odpowiedź D2"},
-            
+            "Czym jest lęk?": {"a": "Reakcja organizmu na potencjalne niebezpieczeństwo", "b": "Stan spokoju", "c": "Uczucie radości", "d": "Zaburzenie emocjonalne"},
+            "Kiedy lęk może stać się problemem?": {"a": "Odpowiedź A2", "b": "Odpowiedź B2", "c": "Odpowiedź C2", "d": "Odpowiedź D2"},
+            "Jakie są skutki działania układu hormonalnego w sytuacji niebezpieczeństwa?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co może wywołać reakcję lękową i błędne koło paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie są charakterystyczne cechy ataku paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Które z wymienionych zaburzeń są najczęściej występujące obok ataków paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jak długo może trwać atak paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "W którym momencie zazwyczaj wypada najwyższy poziom ataków paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie są trzy rodzaje napadów lęku?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Kto częściej choruje na ataki paniki według statystyk?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie czynniki mogą sprzyjać wystąpieniu ataków paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie inne zaburzenia mogą być powiązane z atakami paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co może być początkiem błędnego koła paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co może wystąpić po początkowym epizodzie ataku paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie mogą być objawy somatyczne w trakcie błędnego koła paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co jest celem pracy nad zachowaniami zabezpieczającymi?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co najmniej ile objawów somatycznych lub poznawczych musi wystąpić podczas ataku paniki, aby był uznany za silny?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie są różnice między napadem lęku a atakiem paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Które stwierdzenie najlepiej opisuje różnicę między objawami ataku paniki a objawami lęku?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Które stwierdzenie poprawnie opisuje różnicę w czasie trwania objawów między atakiem paniki a nasilonym lękiem?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie kroki należy podjąć, aby pomóc osobie z atakiem paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co można zrobić, aby pomóc osobie z atakiem paniki w kontekście oddychania?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie inne techniki można zastosować podczas ataku paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Co zaleca się robić w przypadku częstych ataków paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Jakie zachowanie należy unikać podczas próby pomocy osobie z atakiem paniki?": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
         };
     
         let userAnswers = {};
