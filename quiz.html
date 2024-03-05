@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S18XM9JD8Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S18XM9JD8Z');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokonaj strach spoleczny!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <img style="width: 20%; height: auto;"  src="logo.png" alt="Wiedziałeś/aś że kolor jasno zielony poprawia samopoczucie?">
+        <h1 style="color: whitesmoke; margin: 0; text-align: center; padding: 20px; background-color: rgb(99, 183, 228);" >Pokonaj strach spoleczny!</h1>
+    </div>
+    <div id="container">
+        <h1>Quiz</h1>
+    <div id="quiz"></div>
+    <button onclick="calculateScore()">Zakończ quiz</button>
+    <div id="result"></div>
+    </div>
+
+    
+    <div id="footer">
+        
+    </div>
+
+    <script>
+        const questions = {
+            "Pytanie 1": {"a": "Odpowiedź A1", "b": "Odpowiedź B1", "c": "Odpowiedź C1", "d": "Odpowiedź D1"},
+            "Pytanie 2": {"a": "Odpowiedź A2", "b": "Odpowiedź B2", "c": "Odpowiedź C2", "d": "Odpowiedź D2"},
+            
+        };
+    
+        let userAnswers = {};
+    
+        function generateRandomQuestions(numQuestions = 10) {
+            return Object.keys(questions).sort(() => Math.random() - 0.5).slice(0, numQuestions);
+        }
+    
+        function startQuiz() {
+            const quizContainer = document.getElementById('quiz');
+            const selectedQuestions = generateRandomQuestions();
+    
+            selectedQuestions.forEach(question => {
+                const options = Object.entries(questions[question]).map(([key, value]) =>
+                    `<label>
+                        <input type="radio" name="${question}" value="${key}" />
+                        ${value}
+                    </label><br>`
+                );
+    
+                quizContainer.innerHTML += `
+                    <div>
+                        <p>${question}</p>
+                        ${options.join('')}
+                    </div>
+                `;
+            });
+        }
+    
+        function calculateScore() {
+            const quizContainer = document.getElementById('quiz');
+            const resultContainer = document.getElementById('result');
+            const selectedQuestions = Object.keys(questions);
+    
+            selectedQuestions.forEach(question => {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption) {
+                    userAnswers[question] = selectedOption.value;
+                }
+            });
+    
+            const correctAnswers = selectedQuestions.filter(question =>
+                userAnswers[question] === Object.keys(questions[question]).reduce((a, b) =>
+                    questions[question][a] > questions[question][b] ? a : b
+                )
+            );
+    
+            const scorePercentage = (correctAnswers.length / selectedQuestions.length) * 100;
+            resultContainer.innerHTML = `Twój wynik: ${correctAnswers.length}/${selectedQuestions.length} (${scorePercentage.toFixed(2)}%)`;
+            quizContainer.innerHTML = '';  // Clear the quiz container
+        }
+    
+        window.onload = startQuiz;
+    </script>
+</body>
+</html>

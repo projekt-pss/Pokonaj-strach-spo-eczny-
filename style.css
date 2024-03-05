@@ -2,10 +2,11 @@ a{
     color: inherit; 
     text-decoration: none;
 }
-
+/* 231, 231, 192, 26, 122, 99
+*/
 body {
-    background-color: rgb(231, 231, 192);
-    font-family: Georgia;
+    background-color: rgb(255, 239, 208);
+    font-family: Comic Sans MS, Comic Sans, cursive;
 }
 #header {
     height: 15%;
@@ -53,5 +54,10 @@ body {
     border-bottom: 3px solid whitesmoke; 
     margin-bottom: 10px;
     font-size: large;
+}
+.container{
+        max-width: 600px;
+        margin: 50px auto;
+    
 }
 
