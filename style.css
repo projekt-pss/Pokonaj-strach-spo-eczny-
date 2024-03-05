@@ -4,7 +4,7 @@ a{
 }
 /* 231, 231, 192, 26, 122, 99
 */
-body {
+.body {
     background-color: rgb(255, 239, 208);
     font-family: Comic Sans MS, Comic Sans, cursive;
 }
@@ -41,6 +41,7 @@ body {
 #footer {
     clear: both;
     height: 15%;
+    text-align: center;
 }
 .ziel{
     color : rgb(124, 224, 106);
