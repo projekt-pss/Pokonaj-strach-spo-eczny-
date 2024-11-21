@@ -1,89 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+a{
+    color: inherit; 
+    text-decoration: none;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: rgb(231, 231, 192);
+    font-family: Georgia;
 }
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    height: 15vh; /* 15% wysokości okna przeglądarki */
-    width: 100%;
-}
-
-.container {
+#header {
+    height: 15%;
     display: flex;
-    min-height: 75vh; /* Minimalna wysokość */
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('las.png'); 
+    background-size: cover;                     /* ustawiłem obraz jako tło*/
+    background-position: center;
+    
 }
 
 #nav {
-    width: 20%;
-    background-color: #f4f4f4;
-    padding: 1em;
+    float: left;
+    width: 30%;
+    height: 70%;
+    position: fixed; /* Ustawia lewy div na stałej pozycji */
+    margin-right: 80px;/* Ustawienie odstępu 15px wewnątrz diva */
 }
 
 #mid {
-    width: 80%;
-    padding: 1em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
-}
-
-.product {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 1em;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
+    float: right; /* kleji mida do boku nawigacji --- ustawienie na lewo nałoży na siebie diby, nie rozjeb tego XD */
+    width: 70%;
+    height: 70%;
     position: relative;
+    margin-left: 100px;
+
+}
+#menu{
+    font-size: large;
+}
+#footer {
+    clear: both;
+    height: 15%;
+}
+.ziel{
+    color : rgb(124, 224, 106);
 }
 
-.product img {
-    width: 100%;
-    height: auto;
+.nieb{
+    color: rgb(106, 183, 224);
 }
 
-.product h3 {
-    margin-top: 0.5em;
-    text-align: center;
+.tekst{
+    border-bottom: 3px solid whitesmoke; 
+    margin-bottom: 10px;
+    font-size: large;
 }
 
-.description {
-    display: none; /* Ukryta do czasu najechania */
-}
-
-.product:hover {
-    grid-column: span 2; /* Rozszerzenie na szerokość dwóch kolumn */
-}
-
-.product:hover .description {
-    display: block;
-}
-
-.product:hover .info {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    align-items: center;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    height: 10vh;
-    width: 100%;
-    position: relative;
-}
